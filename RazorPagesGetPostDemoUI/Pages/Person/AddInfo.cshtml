@@ -1,0 +1,29 @@
+﻿@page
+@model RazorPagesGetPostDemoUI.Pages.Person.AddInfoModel
+@{
+}
+
+<h1>Add Person Info</h1>
+
+
+
+<div>
+    Post to add info that then does a get on this page
+    <form method= "get">
+        <input type="text" asp-for="CurrentPerson.Name" placeholder="Name"/>
+        <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Town"/>
+        <label asp-for="CurrentPerson.Hometown" />
+        <input type ="submit" />
+    </form>
+</div>
+
+
+<div>
+    Cross post to AddInfo page
+    <form method="post" asp-page="Index">
+        <input type="text" asp-for="CurrentPerson.Name" placeholder="Name" />
+        <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Town" />
+        <label asp-for="CurrentPerson.Hometown" />
+        <input type="submit" />
+    </form>
+</div>

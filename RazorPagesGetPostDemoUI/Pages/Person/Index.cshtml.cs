@@ -1,26 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPagesGetPostDemoUI.Models;
 
-namespace RazorPagesGetPostDemoUI.Pages
+namespace RazorPagesGetPostDemoUI.Pages.Person
 {
     [BindProperties(SupportsGet = true)]
     public class IndexModel : PageModel
     {
+
+        private ILogger<IndexModel> _logger;
         
-        private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
         }
+        public PersonInfo CurrentPerson { get; set; } = new();
         public void OnGet()
         {
-            _logger.LogInformation("Main Site Index OnGet() called");
-        }
+            _logger.LogInformation("Index OnGet called");
 
+        }
         public void OnPost()
         {
-            _logger.LogInformation("Main site Index OnPost() called");
+
         }
     }
 }
