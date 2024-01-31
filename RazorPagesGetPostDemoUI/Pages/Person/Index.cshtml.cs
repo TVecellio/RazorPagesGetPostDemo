@@ -10,7 +10,6 @@ namespace RazorPagesGetPostDemoUI.Pages.Person
 
         private ILogger<IndexModel> _logger;
         
-
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
