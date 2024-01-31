@@ -8,8 +8,8 @@
 
 
 <div>
-    Post to add info that then does a get on this page
-    <form method= "get">
+    Post to add info that then does a get to the index page
+    <form method= "get" asp-page="Index">
         <input type="text" asp-for="CurrentPerson.Name" placeholder="Name"/>
         <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Town"/>
         <label asp-for="CurrentPerson.Hometown" />
