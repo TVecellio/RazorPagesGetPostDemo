@@ -17,12 +17,12 @@ namespace RazorPagesGetPostDemoUI.Pages.Person
         public PersonInfo CurrentPerson { get; set; } = new();
         public void OnGet()
         {
-            _logger.LogInformation("Index OnGet called");
+            _logger.LogInformation("INDEX ONPOST called");
 
         }
         public void OnPost()
         {
-
+            _logger.LogInformation("INDEX ONPOST called");
         }
     }
 }

@@ -13,9 +13,11 @@ namespace RazorPagesGetPostDemoUI.Pages.Person
         public PersonInfo CurrentPerson { get; set; } = new(); // can use new if the type is mentioned on the left
         public void OnGet()
         {
+            _logger.LogInformation("ONGET called in ADDINFO page");
         }
         public IActionResult onPost()
         {
+            _logger.LogInformation("ONPOST called in ADDINFO page");
             if(ModelState.IsValid)
             {
                 return RedirectToPage("./Index", CurrentPerson);
